@@ -32,7 +32,7 @@ func _content_reset_positions() -> void:
 	for slide in content.get_children():
 		slide.set_position(
 			Vector2(
-				frame.get_position().x - slide.get_size().x,
+				frame.get_position().x - frame.get_size().x,
 				frame.get_position().y
 			)
 		)

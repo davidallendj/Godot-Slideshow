@@ -1,11 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://gxkftwihyaeb"]
+[gd_scene load_steps=5 format=3 uid="uid://gxkftwihyaeb"]
 
-[ext_resource type="Script" path="res://Slideshow.gd" id="1_c4yco"]
-[ext_resource type="Texture2D" uid="uid://hae3xxu5gi1j" path="res://assets/textures/left.png" id="2_ipc81"]
-[ext_resource type="Texture2D" uid="uid://htlpmfnfxo0p" path="res://assets/textures/airplanecomercial.png" id="3_r020g"]
-[ext_resource type="Texture2D" uid="uid://cq85cp58w2yo" path="res://assets/textures/coin.png" id="4_k2rtf"]
-[ext_resource type="Texture2D" uid="uid://b0clm03ld3sqt" path="res://assets/textures/checkmark.png" id="5_drrg7"]
-[ext_resource type="Texture2D" uid="uid://bj1lt3rs788c0" path="res://assets/textures/right.png" id="6_07ka3"]
+[ext_resource type="Texture2D" uid="uid://hae3xxu5gi1j" path="res://assets/textures/left.png" id="1_4ts6c"]
+[ext_resource type="Script" path="res://Slideshow.gd" id="1_ts2cx"]
+[ext_resource type="Texture2D" uid="uid://bj1lt3rs788c0" path="res://assets/textures/right.png" id="2_15q3q"]
+[ext_resource type="Texture2D" uid="uid://htlpmfnfxo0p" path="res://assets/textures/airplanecomercial.png" id="3_a1d3h"]
 
 [node name="Slideshow" type="Control"]
 layout_mode = 3
@@ -14,7 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_c4yco")
+script = ExtResource("1_ts2cx")
 
 [node name="Container" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -39,7 +37,7 @@ alignment = 1
 unique_name_in_owner = true
 layout_mode = 2
 keep_pressed_outside = true
-texture_normal = ExtResource("2_ipc81")
+texture_normal = ExtResource("1_4ts6c")
 stretch_mode = 3
 
 [node name="ContentFrame" type="PanelContainer" parent="Container/ScrollContainer/Frame"]
@@ -66,45 +64,32 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
-texture = ExtResource("3_r020g")
+texture = ExtResource("3_a1d3h")
 expand_mode = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Container/ScrollContainer/Frame/ContentFrame/MarginContainer/Content"]
-layout_mode = 0
-offset_right = 914.0
-offset_bottom = 392.0
-
-[node name="TextureRect2" type="TextureRect" parent="Container/ScrollContainer/Frame/ContentFrame/MarginContainer/Content/HBoxContainer"]
+[node name="TextureRect2" type="TextureRect" parent="Container/ScrollContainer/Frame/ContentFrame/MarginContainer/Content"]
+custom_minimum_size = Vector2(300, 200)
 layout_mode = 2
+offset_top = 260.0
+offset_right = 912.0
+offset_bottom = 516.0
 size_flags_horizontal = 3
-texture = ExtResource("4_k2rtf")
-
-[node name="TextureRect3" type="TextureRect" parent="Container/ScrollContainer/Frame/ContentFrame/MarginContainer/Content/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-texture = ExtResource("4_k2rtf")
-
-[node name="TextureRect4" type="TextureRect" parent="Container/ScrollContainer/Frame/ContentFrame/MarginContainer/Content/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-texture = ExtResource("4_k2rtf")
+texture = ExtResource("3_a1d3h")
+expand_mode = 1
 
 [node name="TextureRect3" type="TextureRect" parent="Container/ScrollContainer/Frame/ContentFrame/MarginContainer/Content"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-grow_horizontal = 2
-grow_vertical = 2
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+offset_left = 516.0
+offset_right = 1028.0
+offset_bottom = 608.0
 size_flags_horizontal = 3
-texture = ExtResource("5_drrg7")
-stretch_mode = 5
+texture = ExtResource("3_a1d3h")
+expand_mode = 1
 
 [node name="Next" type="TextureButton" parent="Container/ScrollContainer/Frame"]
 unique_name_in_owner = true
 layout_mode = 2
 keep_pressed_outside = true
-texture_normal = ExtResource("6_07ka3")
+texture_normal = ExtResource("2_15q3q")
 stretch_mode = 3
