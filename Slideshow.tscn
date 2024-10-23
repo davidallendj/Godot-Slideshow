@@ -33,15 +33,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
 
-[node name="Previous" type="TextureButton" parent="Container/ScrollContainer/Frame"]
-unique_name_in_owner = true
-layout_mode = 2
-keep_pressed_outside = true
-texture_normal = ExtResource("1_4ts6c")
-stretch_mode = 3
-
 [node name="ContentFrame" type="PanelContainer" parent="Container/ScrollContainer/Frame"]
-clip_children = 1
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -61,6 +53,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 104.0
+offset_right = 104.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -70,8 +64,9 @@ expand_mode = 1
 [node name="TextureRect2" type="TextureRect" parent="Container/ScrollContainer/Frame/ContentFrame/MarginContainer/Content"]
 custom_minimum_size = Vector2(300, 200)
 layout_mode = 2
+offset_left = 104.0
 offset_top = 260.0
-offset_right = 912.0
+offset_right = 1016.0
 offset_bottom = 516.0
 size_flags_horizontal = 3
 texture = ExtResource("3_a1d3h")
@@ -80,16 +75,34 @@ expand_mode = 1
 [node name="TextureRect3" type="TextureRect" parent="Container/ScrollContainer/Frame/ContentFrame/MarginContainer/Content"]
 custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
-offset_left = 516.0
-offset_right = 1028.0
+offset_left = 620.0
+offset_right = 1132.0
 offset_bottom = 608.0
 size_flags_horizontal = 3
 texture = ExtResource("3_a1d3h")
 expand_mode = 1
 
-[node name="Next" type="TextureButton" parent="Container/ScrollContainer/Frame"]
+[node name="Previous" type="TextureButton" parent="Container/ScrollContainer/Frame/ContentFrame"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(70, 0)
 layout_mode = 2
+size_flags_horizontal = 0
+keep_pressed_outside = true
+texture_normal = ExtResource("1_4ts6c")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Next" type="TextureButton" parent="Container/ScrollContainer/Frame/ContentFrame"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+size_flags_horizontal = 8
 keep_pressed_outside = true
 texture_normal = ExtResource("2_15q3q")
-stretch_mode = 3
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Test" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
